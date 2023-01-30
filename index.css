@@ -14,6 +14,13 @@ body {
     place-items: center;
 }
 
+.active {
+    width: 98% !important;
+    height: 96% !important;
+    margin: 1% !important;
+    transform: rotate(0deg) translateX(0) !important;
+}
+
 #cardcontainer,
 .card {
     aspect-ratio: 5 / 7;
