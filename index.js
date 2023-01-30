@@ -16,21 +16,27 @@ secondCard.addEventListener("click", () => {
 thirdCard.addEventListener("click", () => {
     ExpandCard(thirdCard, "thirdcard")
 });
+fourthCard.addEventListener("click", () => {
+    ExpandCard(fourthCard, "fourthcard")
+});
 
 function ExpandCard(cardobj, cardname){
     if (isactive){
         isactive = false
-        cardobj.classList.remove("active");
         body.style.display = "grid";
+        cardobj.classList.remove("active");
+
         firstCard.style.visibility = "visible"
         secondCard.style.visibility = "visible"
         thirdCard.style.visibility = "visible"
         fourthCard.style.visibility = "visible"
         
-        } else {
+        } else {// Displaying the active card and hiding the others
         isactive = true
+        
         cardobj.classList.add("active");
         body.style.display = "block";
+        
         switch (cardname){
             case("firstcard"):
                 secondCard.style.visibility = "hidden"
@@ -53,14 +59,5 @@ function ExpandCard(cardobj, cardname){
                 thirdCard.style.visibility = "hidden"
                 break;
         }
-        
-            // disable all other cards
-
-        // firstCard.style.width = "98%";
-        // firstCard.style.height = "96%";
-    
-        // firstCard.style.margin = "1%";
-        // firstCard.style.transform = "rotate(0deg) translateX(0)";
-        // firstCard.classList.remove("inactive")
     }
 }
