@@ -1,3 +1,5 @@
+
+//Changes the size and rotation of firstCard element when clicked by the user.
 const body = document.querySelector("body") 
 const firstCard = document.getElementById('firstcard');
 firstCard.addEventListener("click", () => {
